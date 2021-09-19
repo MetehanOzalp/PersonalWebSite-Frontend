@@ -1,0 +1,27 @@
+.home {
+  height: 53rem;
+  row-gap: 1rem;
+}
+
+.home__data {
+  align-self: center;
+  float: left;
+}
+
+.home__title {
+  font-size: 50px;
+  font-weight: bolder;
+  margin-bottom: var(--mb-5);
+}
+
+.home__title-color {
+  color: var(--first-color);
+}
+
+.home__img {
+  position: unset;
+  /* right: 0rem; */
+  /* bottom: 0; */
+  width: 349px;
+  align-self: center;
+}
