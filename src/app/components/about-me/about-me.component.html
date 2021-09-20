@@ -7,19 +7,26 @@
     <div>
       <h2 class="about__subtitle">Metehan Özalp</h2>
       <p class="about__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales
-        porttitor mattis. Aliquam mattis nisl eget lacus fringilla mattis.
-        Pellentesque diam lectus, auctor at tincidunt a, volutpat a nulla.
-        Pellentesque habitant morbi tristique senectus et netus et malesuada
-        fames ac turpis egestas. Vestibulum scelerisque nulla orci, ut placerat
-        neque consectetur et. Suspendisse blandit, diam a sagittis interdum, ex
-        nisi placerat sem, non auctor tellus nisi at metus. Etiam accumsan
-        pretium placerat. Fusce mattis volutpat risus, in auctor sem tincidunt
-        quis. Maecenas non elit fermentum lectus auctor lacinia. Pellentesque
-        eget augue tellus. Pellentesque varius dui sit amet neque lobortis
-        pulvinar. Praesent maximus mattis porta. Cras tortor purus, tempor in
-        risus id, luctus ultrices tellus.
+        {{ aboutMe.description }}
       </p>
+      <ul class="about-info mt-4 px-md-0 px-2">
+        <li class="d-flex">
+          <span>Ad Soyad:</span>
+          <span>{{ aboutMe.firstName }} {{ aboutMe.lastName }}</span>
+        </li>
+        <li class="d-flex">
+          <span>Email:</span>
+          <span
+            ><a href="mailto:{{ aboutMe.email }}">{{ aboutMe.email }}</a></span
+          >
+        </li>
+        <li class="d-flex">
+          <span>Meslek:</span> <span>{{ aboutMe.job }}</span>
+        </li>
+        <li class="d-flex">
+          <span>Doğum Tarihi:</span> <span>{{ aboutMe.birthDate }}</span>
+        </li>
+      </ul>
     </div>
   </div>
 </section>

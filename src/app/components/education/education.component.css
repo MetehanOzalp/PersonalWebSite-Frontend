@@ -1,0 +1,7 @@
+.educations {
+  text-align: center;
+}
+
+.educations__container {
+  row-gap: 2rem;
+}

@@ -2,25 +2,10 @@
   <h2 class="section-title">Yeteneklerim</h2>
   <div class="skills__container bd-grid">
     <div>
-      <div class="skills__data">
+      <div class="skills__data" *ngFor="let skill of skills">
         <div class="skills__names">
-          <span class="skills__name">HTML5</span>
+          <span class="skills__name">{{ skill.skillName }}</span>
         </div>
-        <div class="skills__bar"></div>
-      </div>
-
-      <div class="skills__data">
-        <div class="skills__names">
-          <span class="skills__name">CSS3</span>
-        </div>
-        <div class="skills__bar"></div>
-      </div>
-
-      <div class="skills__data">
-        <div class="skills__names">
-          <span class="skills__name">Java</span>
-        </div>
-        <div class="skills__bar"></div>
       </div>
     </div>
   </div>

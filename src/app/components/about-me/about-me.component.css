@@ -20,3 +20,31 @@
   text-align: start;
   font-size: 16.5px;
 }
+
+.about-info {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+ul.about-info li {
+  list-style: none;
+  margin-bottom: 10px;
+  color: #6c757d;
+}
+ul.about-info li span {
+  width: calc(100% - 130px);
+}
+ul.about-info li span:first-child {
+  font-weight: 600;
+  color: #000000;
+  width: 130px;
+}
+
+/* .d-flex {
+  display: border-box;
+  display: block !important;
+  display: flex !important;
+  text-align: left;
+} */
