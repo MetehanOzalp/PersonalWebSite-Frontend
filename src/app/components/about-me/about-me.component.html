@@ -2,7 +2,11 @@
   <h2 class="section-title">Hakkımda</h2>
   <div class="about__container bd-grid">
     <div class="about__img">
-      <img src="../../../assets/images/METEHAN ÖZALP.jpg" />
+      <img
+        *ngIf="aboutMe.imagePath != ''"
+        src="https://localhost:44397/{{ aboutMe.imagePath }}"
+        alt=""
+      />
     </div>
     <div>
       <h2 class="about__subtitle">Metehan Özalp</h2>

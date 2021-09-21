@@ -13,7 +13,7 @@ export class AboutMeService {
 
   constructor(private httpClient: HttpClient) {}
 
-  add(aboutMe: AboutMe): Observable<ResponseModel> {
+  add(aboutMe: any): Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl + 'add', aboutMe);
   }
 

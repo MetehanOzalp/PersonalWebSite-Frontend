@@ -1,0 +1,55 @@
+<div
+  class="container project__add__container"
+  style="width: 100%; height: 689px"
+>
+  <div
+    class="row justify-content-center align-items-center"
+    style="margin-top: 1rem; margin-bottom: 1rem"
+  >
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header"><h5>Proje Ekle</h5></div>
+        <div class="card-body">
+          <form [formGroup]="projectAddForm">
+            <div class="mb-3">
+              <label for="name">Proje adı</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  formControlName="name"
+                  class="form-control"
+                  placeholder="Proje adı"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="githubLink">Github Linki</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="githubLink"
+                  formControlName="githubLink"
+                  class="form-control"
+                  placeholder="Github linki"
+                />
+              </div>
+            </div>
+            <label for="imagePath">Resim</label>
+            <div class="form-group">
+              <input
+                type="file"
+                (change)="onFileSelected($event)"
+                name="imagePath"
+                multiple
+              />
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

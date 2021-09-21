@@ -15,7 +15,7 @@ export class ProjectService {
 
   constructor(private httpClient: HttpClient) {}
 
-  add(project: Project): Observable<ResponseModel> {
+  add(project: any): Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl + 'add', project);
   }
 

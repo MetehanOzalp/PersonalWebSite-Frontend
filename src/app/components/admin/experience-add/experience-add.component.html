@@ -1,0 +1,68 @@
+<div
+  class="container experience__add__container"
+  style="width: 100%; height: 689px"
+>
+  <div
+    class="row justify-content-center align-items-center"
+    style="margin-top: 1rem; margin-bottom: 1rem"
+  >
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header"><h5>Deneyim Ekle</h5></div>
+        <div class="card-body">
+          <form [formGroup]="experienceAddForm">
+            <div class="mb-3">
+              <label for="companyName">Şirket adı</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="companyName"
+                  formControlName="companyName"
+                  class="form-control"
+                  placeholder="Şirket adı"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="positionName">Pozisyon adı</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="positionName"
+                  formControlName="positionName"
+                  class="form-control"
+                  placeholder="Pozisyon adı"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="startDate">Başlama Tarihi</label>
+              <div class="form-group">
+                <input
+                  type="date"
+                  id="startDate"
+                  formControlName="startDate"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="endDate">Bitiş Tarihi</label>
+              <div class="form-group">
+                <input
+                  type="date"
+                  id="endDate"
+                  formControlName="endDate"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

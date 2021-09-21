@@ -1,0 +1,80 @@
+<div
+  class="container education__add__container"
+  style="width: 100%; height: 689px"
+>
+  <div
+    class="row justify-content-center align-items-center"
+    style="margin-top: 1rem; margin-bottom: 1rem"
+  >
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header"><h5>Eğitim Ekle</h5></div>
+        <div class="card-body">
+          <form [formGroup]="educationAddForm">
+            <div class="mb-3">
+              <label for="schoolName">Okul adı</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="schoolName"
+                  formControlName="schoolName"
+                  class="form-control"
+                  placeholder="Okul adı"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="fieldOfStudy">Bölüm adı</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="fieldOfStudy"
+                  formControlName="fieldOfStudy"
+                  class="form-control"
+                  placeholder="Bölüm adı"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="degree">Derece</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="degree"
+                  formControlName="degree"
+                  class="form-control"
+                  placeholder="Derece"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="startDate">Başlama Tarihi</label>
+              <div class="form-group">
+                <input
+                  type="date"
+                  id="startDate"
+                  formControlName="startDate"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="endDate">Bitiş Tarihi</label>
+              <div class="form-group">
+                <input
+                  type="date"
+                  id="endDate"
+                  formControlName="endDate"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
