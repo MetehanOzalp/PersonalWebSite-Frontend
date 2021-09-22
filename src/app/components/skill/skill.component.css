@@ -24,6 +24,12 @@
   box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
 }
 
+.skills__data:hover {
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+  transform: scale(1.5);
+}
+
 .skills__name {
   display: flex;
   align-items: center;

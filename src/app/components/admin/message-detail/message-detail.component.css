@@ -1,0 +1,24 @@
+.container {
+  margin-top: 10px;
+}
+
+.card {
+  width: 1000px;
+}
+
+time {
+  float: right;
+}
+
+h5 {
+  float: left;
+  margin-right: 70px;
+}
+
+strong {
+  margin-right: 10px;
+}
+
+li {
+  border: none;
+}

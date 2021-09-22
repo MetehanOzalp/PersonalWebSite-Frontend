@@ -22,6 +22,8 @@ import { ProjectAddComponent } from './components/admin/project-add/project-add.
 import { AboutMeAddComponent } from './components/admin/about-me-add/about-me-add.component';
 import { ExperienceAddComponent } from './components/admin/experience-add/experience-add.component';
 import { EducationAddComponent } from './components/admin/education-add/education-add.component';
+import { MessagesComponent } from './components/admin/messages/messages.component';
+import { MessageDetailComponent } from './components/admin/message-detail/message-detail.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -44,6 +46,8 @@ export function tokenGetter() {
     AboutMeAddComponent,
     ExperienceAddComponent,
     EducationAddComponent,
+    MessagesComponent,
+    MessageDetailComponent,
   ],
   imports: [
     BrowserModule,

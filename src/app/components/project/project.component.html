@@ -1,21 +1,24 @@
 <section class="projects section" id="projects">
   <h2 class="section-title">Projelerim</h2>
-  <div class="projects__container bd-grid">
-    <div class="container">
-      <img
-        src="../../../assets/images/METEHAN ÖZALP.jpg"
-        alt="Avatar"
-        class="image"
-      />
-      <div class="overlay">
-        <div class="text">Hello World</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let project of projects">
+        <div class="content">
+          <div class="content-overlay"></div>
+          <img
+            class="content-image"
+            src="https://localhost:44397/{{ project.projectThumbnail }}"
+          />
+          <div class="content-details fadeIn-bottom">
+            <h3 class="content-title">{{ project.name }}</h3>
+            <p class="content-text">
+              <a href="{{ project.githubLink }}" class="fa fa-map-marker">{{
+                project.githubLink
+              }}</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- <div class="projects__img" *ngFor="let project of projects">
-      <img
-        src="https://localhost:44397/{{ project.projectThumbnail }}"
-        alt=""
-      />
-    </div> -->
   </div>
 </section>

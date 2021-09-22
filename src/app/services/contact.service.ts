@@ -28,6 +28,12 @@ export class ContactService {
     return this.httpClient.post<ResponseModel>(this.apiUrl + 'delete', contact);
   }
 
+  getAll(): Observable<ListResponseModel<Contact>> {
+    return this.httpClient.get<ListResponseModel<Contact>>(
+      this.apiUrl + 'getAll'
+    );
+  }
+
   getReadMessage(): Observable<ListResponseModel<Contact>> {
     return this.httpClient.get<ListResponseModel<Contact>>(
       this.apiUrl + 'getReadMessages'

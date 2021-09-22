@@ -1,0 +1,86 @@
+<div class="container messages">
+  <div class="row">
+    <div class="col-md-5">
+      <!-- ---------------------------------------------------------------------- -->
+      <div class="card card-white mb-5">
+        <div class="card-heading clearfix border-bottom mb-4">
+          <h4 class="card-title">Gelen Kutusu</h4>
+        </div>
+        <div class="card-body">
+          <ol class="list-group mb-3" *ngFor="let contact of contacts">
+            <li
+              *ngIf="contact.status"
+              class="list-group-item"
+              (click)="selectionContact(contact)"
+            >
+              <div class="media">
+                <div class="media-body">
+                  <p>
+                    <strong
+                      >{{ contact.firstName }} {{ contact.lastName }}</strong
+                    >
+                    <time class="text-muted float-right">{{
+                      contact.contactDate
+                    }}</time>
+                  </p>
+                  <p class="card-text">
+                    {{ contact.subject }}
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li
+              *ngIf="!contact.status"
+              class="list-group-item"
+              (click)="selectionContact(contact)"
+            >
+              <div class="media">
+                <div class="media-body">
+                  <p>
+                    <strong
+                      >{{ contact.firstName }} {{ contact.lastName }}</strong
+                    >
+                    <time class="text-muted float-right">{{
+                      contact.contactDate
+                    }}</time>
+                  </p>
+                  <p class="card-text unread">
+                    {{ contact.subject }}
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <app-message-detail
+        [contact]="selectedContact"
+        *ngIf="selectedContact"
+      ></app-message-detail>
+    </div>
+  </div>
+</div>
+
+<!-- <ul class="list-unstyled message">
+  <li
+    *ngFor="let contact of contacts"
+    (click)="selectionContact(contact)"
+  >
+    <div class="media align-items-center">
+      <div class="media-body">
+        <div class="head">
+          <h6 class="subject">
+            {{ contact.firstName }}
+            {{ contact.lastName }} -
+          </h6>
+          <span class="date">{{ contact.contactDate }}</span>
+        </div>
+        <div class="content">
+          <span>{{ contact.subject }}</span>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul> -->

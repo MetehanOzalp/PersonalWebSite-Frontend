@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="card" *ngIf="contact">
+    <div class="card-header">
+      <h5>Konu : {{ contact.subject }}</h5>
+      <p>
+        <strong
+          >{{ contact.firstName }} {{ contact.lastName }} -
+          <span
+            ><a href="mailto:{{ contact.email }}"> {{ contact.email }}</a></span
+          ></strong
+        >
+        <time class="text-muted float-right">{{ contact.contactDate }}</time>
+      </p>
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+        {{ contact.message }}
+      </p>
+    </div>
+  </div>
+</div>

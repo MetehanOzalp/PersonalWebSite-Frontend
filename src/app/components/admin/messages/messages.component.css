@@ -1,0 +1,53 @@
+.messages {
+  margin-top: 4rem;
+  margin-left: 0rem;
+  min-height: 626px;
+}
+
+.message li {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.message li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.card {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  box-shadow: none;
+  border: none;
+  padding: 25px;
+}
+.mb-5,
+.my-5 {
+  margin-bottom: 3rem !important;
+}
+
+li {
+  cursor: pointer;
+}
+
+.content {
+  float: left;
+}
+
+time {
+  float: right;
+}
+
+strong {
+  color: #a2a2a2;
+}
+
+.unread {
+  font-weight: bold;
+}
