@@ -19,6 +19,8 @@
         formControlName="email"
         placeholder="Mail adresiniz"
         class="contact__input"
+        ngModel
+        [email]="true"
       />
       <input
         type="text"
@@ -37,6 +39,7 @@
       ></textarea>
       <input
         type="button"
+        type="reset"
         value="Gönder"
         class="contact__button button"
         (click)="add()"

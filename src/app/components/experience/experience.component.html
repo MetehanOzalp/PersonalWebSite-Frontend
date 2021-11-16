@@ -12,7 +12,10 @@
         />
       </div>
       <div class="text pl-3">
-        <span class="date"
+        <span class="date" *ngIf="experience.endDate"
+          >{{ experience.startDate }} - {{ experience.endDate }}</span
+        >
+        <span class="date" *ngIf="!experience.endDate"
           >{{ experience.startDate }} - {{ experience.endDate }}</span
         >
         <h2>{{ experience.positionName }}</h2>

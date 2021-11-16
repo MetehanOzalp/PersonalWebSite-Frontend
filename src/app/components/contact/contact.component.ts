@@ -6,6 +6,7 @@ import {
   FormControl,
   Validators,
 } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -17,7 +18,8 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private contactService: ContactService
+    private contactService: ContactService,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -44,12 +46,16 @@ export class ContactComponent implements OnInit {
       contactModel.message = contactModel.message;
       this.contactService.add(contactModel).subscribe(
         (response) => {
+          this.toastrService.success('Mesaj gönderildi', 'Başarılı');
           console.log('Mesaj gitti');
         },
         (responseError) => {
           console.log('hata');
         }
       );
+      this.contactAddForm.reset();
+    } else {
+      this.toastrService.error('Lütfen Tüm alanları doldurun', 'Hata');
     }
   }
 }

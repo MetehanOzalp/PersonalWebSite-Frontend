@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { DatePipe } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,8 @@ import { ExperienceAddComponent } from './components/admin/experience-add/experi
 import { EducationAddComponent } from './components/admin/education-add/education-add.component';
 import { MessagesComponent } from './components/admin/messages/messages.component';
 import { MessageDetailComponent } from './components/admin/message-detail/message-detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -60,9 +63,12 @@ export function tokenGetter() {
         tokenGetter: tokenGetter,
       },
     }),
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({ positionClass: 'toast-bottom-right' }),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    DatePipe,
   ],
   bootstrap: [AppComponent],
 })

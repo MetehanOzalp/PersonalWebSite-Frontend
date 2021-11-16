@@ -12,8 +12,11 @@
         />
       </div>
       <div class="text pl-3">
-        <span class="date"
+        <span class="date" *ngIf="education.endDate"
           >{{ education.startDate }}-{{ education.endDate }}</span
+        >
+        <span class="date" *ngIf="!education.endDate"
+          >{{ education.startDate }}-Devam Ediyor</span
         >
         <h2>{{ education.fieldOfStudy }}</h2>
         <span class="position">{{ education.schoolName }}</span>
